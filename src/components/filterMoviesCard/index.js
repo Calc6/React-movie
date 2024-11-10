@@ -13,13 +13,26 @@ import img from '../../images/pexels-dziana-hasanbekava-5480827.jpg';
 import { getGenres } from "../../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from '../spinner'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const formControl = 
   {
     margin: 1,
     minWidth: "90%",
-    backgroundColor: "rgb(255, 255, 255)"
+    backgroundColor: "rgb(25, 25, 25)"
   };
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark', 
+      primary: {
+        main: '#90caf9', 
+      },
+      secondary: {
+        main: '#f48fb1', 
+      }
+    },
+  });
   
 export default function FilterMoviesCard(props) {
 
@@ -51,15 +64,15 @@ export default function FilterMoviesCard(props) {
   };
   
   return (
+    <ThemeProvider theme={darkTheme}>
     <Card 
-      sx={{
-        backgroundColor: "rgb(204, 204, 0)"
-      }} 
+
       variant="outlined">
+        
       <CardContent>
-        <Typography variant="h5" component="h1">
+        <Typography variant="h4" component="h1">
           <SearchIcon fontSize="large" />
-          Filter the movies.
+         Filter
         </Typography>
         <TextField
           sx={{...formControl}}
@@ -97,10 +110,11 @@ export default function FilterMoviesCard(props) {
       <CardContent>
         <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
-          Filter the movies.
+          Filter
           <br />
         </Typography>
       </CardContent>
     </Card>
+    </ThemeProvider>
   );
 }
