@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { patch } from "@mui/material";
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
@@ -26,6 +27,7 @@ const SiteHeader = ({ history }) => {
   const menuOptions = [
     { label: "Home", path: "/" },
     { label: "Favorites", path: "/movies/favorites" },
+    { label: "Watchlist", path: "/watchlist"},
     { label: "Trending", path: "/movies/trending" },
     { label: "Upcoming", path: "/movies/upcoming" },
   ];
