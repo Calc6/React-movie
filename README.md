@@ -1,91 +1,41 @@
-# React In-class Exam, November 2024
+# Assignment 1 - ReactJS app.
 
-## 1. Setup instructions
+Name: Calum Cullen
 
-This repository contains the starting code for a lab-based React assessment. 
+## Overview.
 
-[https://github.com/rbirney/react-exam](https://github.com/rbirney/react-exam)
+Following the rubrix of "Baseline" due to circumstances. two static endpoints ,New Style added, watchlist added
 
-You are required to take the following steps in preparation for this exam.
+### Features.
+[ A bullet-point list of the __new features__ you added to the Movies Fan app (and any modifications to existing features) .]
+ 
++ Trending section
++ Upcoming section
++ WatchList section
++ etc
++ etc
 
-## Clone the react-exam repository
+## Setup requirements.
 
-- Choose a folder where you want to save the repository and open a command prompt in this location
+Setup should run just fine after being pulled down
 
-- Clone the `react-exam` repository using the following command:
+## API endpoints.
 
-~~~bash
-git clone https://github.com/rbirney/react-exam.git
-~~~
+[ List the __additional__ TMDB endpoints used, giving the description and pathname for each one.] 
 
-### Add .env file
+e.g.
++ Trending Movies - /movies/trending#
+  -Seperate page using TMDBs api that shows currently trending movies similar to the discover page. -      `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_TMDB_KEY}`
 
-- Open the cloned project in Visual Studio Code
-
-- Create an .env file in the base folder. 
-
-- Add your TMDB API key (the same as you used in the React labs)
-
-~~~bash
-REACT_APP_TMDB_KEY=YOUR_KEY_GOES_HERE
-FAST_REFRESH=false
-~~~
-
-### Create your own repository
-
-Create a new public repository in your GitHub account called 'reactExam'.
-
-Copy the URL of your new repository.
-
-Open a new terminal in VS Code (in your react-exam folder) and type the following commands:
-
-~~~bash
-git remote remove origin
-git remote add origin ...URL of your new repository...
-git push origin main
-~~~
-
-Verify that your GitHub repository now contains the starter app.
++ Upcoming Movies - /movies/Upcoming
+  -Seperate page also displayed on the site header to show upcoming movies. Movies that are not currently released but that are soon. I did this using the TMDBs api also -`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
 
 
-### Start the app
+## Routing.
 
-In your VS Code terminal, run the following commands:
+[ List the __new routes__ supported by your app and state the associated page.]
 
-~~~bash
-npm install
-npm start
-~~~
++ /Watchlist - Similar to the favorites section allows the user to mark movies to add them to a watch later section
++ /movies/trending
++ /movies/upcoming
 
-Now check that the Movie App runs correctly and is accessible from a browser on your machine.
-
-
-### Update README.md
-
-Add your name and student number to the README.md file, as shown below:
-
-~~~markdown
-# React In-class Exam, November 2024
-
-Your Name, Student Number
-...
-~~~
-
-Push your changes to GitHub:
-
-~~~bash
-git add -A
-git commit -m "Readme updated"
-git push origin main
-~~~
-
-**Please ensure you have completed these steps before the lab-based exam and that you can push changes to your remote repository on GitHub.**
-
-
-## 2. Submit to Moodle
-
-Once you have created your GitHub repository you can submit it to Moodle (no need to wait until the day of the exam!)
-
-You can submit it here:
-
-[https://moodle.wit.ie/mod/assign/view.php?id=4357694](https://moodle.wit.ie/mod/assign/view.php?id=4357694)
