@@ -17,10 +17,15 @@ const TrendingMoviesPage = () => {
 
   const trendingMovies = data.results;
 
+  const action = (movie) => (
+    <button onClick={() => console.log(`Clicked: ${movie.title}`)}>Action</button>
+  );
+
   return (
     <PageTemplate
       title="Trending Movies"
       movies={trendingMovies}
+      action={action} 
     />
   );
 };

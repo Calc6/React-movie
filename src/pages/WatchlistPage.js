@@ -5,6 +5,8 @@ import RemoveFromWatchlistIcon from '../components/cardIcons/removeFromWatchlist
 
 const WatchlistPage = () => {
   const { watchlist, removeMovieFromWatchlist } = useContext(MoviesContext);
+  console.log(watchlist);
+
 
   return (
     <MovieListPageTemplate
