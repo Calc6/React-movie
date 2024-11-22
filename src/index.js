@@ -12,7 +12,8 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import WatchlistPage from "./pages/WatchlistPage";
-import TrendingMoviesPage from "./pages/trendingPage"
+import TrendingMoviesPage from "./pages/trendingPage";
+import UpcomingPage from "./pages/UpcomingPage";
 
 
 const queryClient = new QueryClient({
@@ -52,6 +53,7 @@ const App = () => {
             <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
             <Route path="/watchlist" element={<WatchlistPage />} />
             <Route path="/movies/trending" element={<TrendingMoviesPage />} />
+            <Route path= "/movies/upcoming" element={<UpcomingPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={ <Navigate to="/" /> } />
           </Routes>
